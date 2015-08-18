@@ -398,7 +398,9 @@ $tmpl = JURI::base()."templates/kkvn/";
 						<h5 class="des">Trở thành thành viên trên Fanpage</h5>
 					</div>
 				</div>
-				<div class="row list-user-box"> Facebook Like Page </div>
+				<div class="row list-user-box">
+					<div class="fb-page" data-href="https://www.facebook.com/KKVN2013" data-width="360" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/KKVN2013"><a href="https://www.facebook.com/KKVN2013">Khoảnh Khắc Việt Nam</a></blockquote></div></div>
+				</div>
 			</div>
 			<!-- End .col-sm-4--> 
 		</div>

@@ -19,8 +19,19 @@ $user = JFactory::getUser();
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4&appId=630010247133511";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <nav class="navbar navbar-fixed-top main-navbar">
 	<div class="container rel">
 		<div class="topbg"></div>
@@ -79,6 +90,7 @@ $user = JFactory::getUser();
 			{module Thông tin}
 			{module Bảo trợ bởi}
 			{module Liên hệ}
+			
 			<div class="col-sm-3">
 				<h4 class="white-me text-uppercase">Nhận tin qua email</h4>
 				<p>Để không bỏ lỡ bất kỳ tin tức nào cũng như thông tin tổ chức các cuộc thi, vui lòng nhập email:</p>
