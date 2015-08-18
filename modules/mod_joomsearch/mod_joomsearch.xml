@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>mod_joomsearch</name>
+  <author>JoomGallery::Project Team</author>
+  <creationDate>18.03.2013</creationDate>
+  <authorEmail>team@joomgallery.net</authorEmail>
+  <authorUrl>www.joomgallery.net</authorUrl>
+  <copyright>(C) 2009 - 2013 JoomGallery::Project Team</copyright>
+  <license>This module is released under the GNU/GPL License</license>
+  <version>3.0 BETA</version>
+  <description>MOD_JOOMSEARCH_DESC</description>
+  <files>
+    <filename module="mod_joomsearch">mod_joomsearch.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>    
+    <filename>changelog.php</filename>    
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+  </files>
+  <media destination="mod_joomsearch" folder="media">
+    <filename>index.html</filename>
+    <filename>mod_joomsearch.js</filename>
+    <filename>search.gif</filename> 
+    <filename>spinner.gif</filename>   
+  </media>
+  <languages>
+    <language tag="de-DE">language/de-DE/de-DE.mod_joomsearch.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.mod_joomsearch.sys.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.mod_joomsearch.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.mod_joomsearch.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="JSGROUPCOMMON" label="JSGROUPCOMMON">
+        <field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+        <field name="itemid" type="text" default="" label="JSITEMID" description="JSITEMIDDESC" />
+        <field class="btn-group" name="ajaxsearch" type="radio" default="1" label="JSAJAXSEARCH" description="JSAJAXSEARCHDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field name="defcatid" type="text" default="" label="JSDEFCATID" description="JSDEFCATIDDESC" />
+        <field class="btn-group" name="defsubcats" type="radio" default="1" label="JSDEFSUBCATID" description="JSDEFSUBCATIDDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="syncjoom" type="radio" default="0" label="JSDEFSYNCJOOM" description="JSDEFSYNCJOOMDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field name="limit" type="text" default="10" label="JSLIMIT" description="JSLIMITDESC" />
+        <!-- search for categories or pictures or both -->
+        <field name="defcatorimg" type="list" default="1" label="JSDEFCATORIMG" description="JSDEFCATORIMGDESC">
+          <option value="0">JSCAT</option>
+          <option value="1">JSPIC</option>
+        </field>
+        <field class="btn-group" name="defsearchimgdescr" type="radio" default="1" label="JSSEARCHDESCRIMG" description="JSSEARCHDESCRIMGDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="defsearchcomments" type="radio" default="0" label="JSSEARCHCOMM" description="JSSEARCHCOMMDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="defsearchauthors" type="radio" default="0" label="JSSEARCHAUTH" description="JSSEARCHAUTHDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="defsearchcatdescr" type="radio" default="0" label="JSSEARCHDESCCAT" description="JSSEARCHDESCCATDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="JSGUSRPANEL" label="JSGUSRPANEL">
+        <field class="btn-group" name="showusrpanel" type="radio" default="1" label="JSSHOWUSRPANEL" description="JSSHOWUSRPANELDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="usrlimit" type="radio" default="0" label="JSSHOWUSRLIM" description="JSSHOWUSRLIMDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="usrcatorimg" type="radio" default="0" label="JSSHOWUSRCATORIMG" description="JSSHOWUSRCATORIMGDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="usrsearchimgdescr" type="radio" default="1" label="JSSEARCHDESCRIMG" description="JSSEARCHDESCRIMGDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="usrsearchcomments" type="radio" default="0" label="JSSEARCHCOMM" description="JSSEARCHCOMMDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="usrsearchauthors" type="radio" default="0" label="JSSEARCHAUTH" description="JSSEARCHAUTHDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field class="btn-group" name="usrsearchcatdescr" type="radio" default="0" label="JSSEARCHDESCCAT" description="JSSEARCHDESCCATDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="JSLAYOUTSETTINGS" label="JSLAYOUTSETTINGS">
+        <field name="layout" type="modulelayout" default="default" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+        <field name="inputboxwidth" type="text" default="0" label="JSINPUTWIDTH" description="JSINPUTWIDTHDESC" />
+        <field name="resultwidth" type="text" default="100" label="JSRESULTWIDTH" description="JSRESULTWIDTHDESC" />
+        <field name="resultheight" type="text" default="200" label="JSRESULTHEIGHT" description="JSRESULTHEIGHTDESC" />
+        <field class="btn-group" name="srchbtnshow" type="radio" default="0" label="JSBUTTONSHOW" description="JSBUTTONSHOWDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field name="srchbtntext" type="text" default="" label="JSBUTTONTEXT" description="JSBUTTONTEXTDESC" />
+        <field class="btn-group" name="srchbtnimg" type="radio" default="0" label="JSBUTTONIMG" description="JSBUTTONIMGDESC">
+          <option value="0">JSNO</option>
+          <option value="1">JSYES</option>
+        </field>
+        <field name="srchbtnpos" type="list" default="0" label="JSBUTTONPOS" description="JSBUTTONPOSDESC">
+          <option value="0">JSBTNRIGHT</option>
+          <option value="1">JSBTNLEFT</option>
+          <option value="2">JSBTNTOP</option>
+          <option value="3">JSBTNBTM</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <updateservers>
+    <server type="collection" priority="1" name="JoomGallery Update Service">http://www.joomgallery.net/components/com_newversion/xml/extensions3.xml</server>
+  </updateservers>
+</extension>

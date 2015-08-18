@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="library" version="1.0" method="upgrade">
+	<name>Profile Cover</name>
+	<libraryname>cover</libraryname>
+	<description>LIB_PROFILECOVER_XML_DESCRIPTION</description>
+	<creationDate>August 2015</creationDate>
+	<author>Mosets Consulting - T.Trung</author>
+	<authorEmail>nttrung211@gmail</authorEmail>
+	<license>MIT License</license>
+	<version>2.0.0</version>
+	<packager>Mosets Consulting</packager>
+    <languages>
+        <language tag="en-GB">en-GB.lib_profilecover.sys.ini</language>
+    </languages>
+    <files>
+		<folder>profilecover</folder>
+	</files>
+</extension>

@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS `#__recharge` (
+`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+`serial` VARCHAR(255)  NOT NULL ,
+`code` VARCHAR(255)  NOT NULL ,
+`provider` VARCHAR(10)  NOT NULL ,
+`status` TINYINT(4)  NOT NULL ,
+`message` VARCHAR(255)  NOT NULL ,
+`amount` VARCHAR(10)  NOT NULL ,
+`trans_id` VARCHAR(255)  NOT NULL ,
+`puid` VARCHAR(255)  NOT NULL ,
+PRIMARY KEY (`id`)
+) DEFAULT COLLATE=utf8_general_ci;
+

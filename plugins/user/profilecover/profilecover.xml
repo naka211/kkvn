@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="user" method="upgrade">
+	<name>PLG_USER_PROFILECOVER</name>
+	<author>Mosets Consulting - T.Trung</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>(C) 2012-present Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>nttrung211@gmail.com</authorEmail>
+	<version>2.0.0</version>
+	<description>PLG_USER_PROFILECOVER_XML_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_user_profilecover.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_user_profilecover.sys.ini</language>
+	</languages>
+	<files>
+		<folder>profiles</folder>
+		<folder>elements</folder>
+		<filename plugin="profilecover">profilecover.php</filename>
+	</files>
+	<media folder="media/plg_user_profilecover" destination="plg_user_profilecover">
+		<folder>images</folder>
+	</media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="maxUploadSizeInBytes" type="text"
+                       class=""
+                       default="2000000"
+                       description="PLG_USER_PROFILECOVER_FIELD_MAXUPLOADSIZEINBYTES_DESC"
+                       label="PLG_USER_PROFILECOVER_FIELD_MAXUPLOADSIZEINBYTES_LABEL"
+                        />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

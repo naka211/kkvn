@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="2.0.0" method="upgrade">
+	<name>Profile Cover Package</name>
+	<packagename>profilecover</packagename>
+	<version>2.0.0</version>
+	<author>Mosets Consulting - T.Trung</author>
+	<creationDate>August 2015</creationDate>
+	<packager>Mosets Consulting - T.Trung</packager>
+	<description>Profile Cover Package</description>
+	<files folder=".">
+		<file type="library" id="lib_profilecover">lib_profilecover-2.0.0.zip</file>
+		<file type="plugin" id="profilecover" group="user">plg_user_profilecover-2.0.0.zip</file>
+	</files>
+</extension>
