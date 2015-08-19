@@ -60,7 +60,8 @@ class JoomGalleryModelImages extends JoomGalleryModel
         'imgdate', 'a.imgdate',
         'hits', 'a.hits',
         'downloads', 'a.downloads',
-        'ordering', 'a.ordering'
+        'ordering', 'a.ordering',
+		'special', 'a.special'
         );
   }
 

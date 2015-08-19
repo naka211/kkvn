@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_special_gallery</name>
+	<author>T.Trung</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>nttrung211@gmail.com</authorEmail>
+	<version>1.0.0</version>
+	<description>Hiển thị hình ảnh chọn lọc</description>
+
+	<customContent />
+
+	<files>
+		<filename module="mod_special_gallery">mod_special_gallery.php</filename>
+	</files>
+</extension>

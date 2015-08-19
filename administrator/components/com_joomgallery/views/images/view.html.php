@@ -169,7 +169,8 @@ class JoomGalleryViewImages extends JoomGalleryView
       'a.imgdate' => JText::_('COM_JOOMGALLERY_COMMON_DATE'),
       'a.hits' => JText::_('COM_JOOMGALLERY_IMGMAN_HITS'),
       'a.downloads' => JText::_('COM_JOOMGALLERY_COMMON_DOWNLOADS'),
-      'a.id' => JText::_('COM_JOOMGALLERY_COMMON_ID')
+      'a.id' => JText::_('COM_JOOMGALLERY_COMMON_ID'),
+	  'a.special' => JText::_('Chọn lọc')
     );
   }
 }
