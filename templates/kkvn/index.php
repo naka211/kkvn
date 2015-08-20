@@ -57,9 +57,7 @@ $user = JFactory::getUser();
 								</a>
 							</li>
 							<li class="pull-left">
-								<a href="#" class="logf regist"  data-toggle="modal" data-target="#Modallogin">
-									Đăng Ký
-								</a>
+								<a href="index.php?option=com_users&view=registration&Itemid=139" class="logf regist">Đăng Ký</a>
 							</li>
 						</ul>
 					</li>
