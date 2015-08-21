@@ -46,6 +46,10 @@
 		/>
 		
 		<!--T.Trung-->
+		<field name="phone" type="text"
+			label="Điện thoại"
+			size="30"
+		/>
 		<field name="balance" type="text"
 			label="Số tiền"
 			size="30"

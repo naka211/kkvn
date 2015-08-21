@@ -217,6 +217,7 @@ class JUser extends JObject
 	protected static $instances = array();
 	
 	//T.Trung
+	public $phone = null;
 	public $balance = null;
 	public $status = null;
 	public $hits = null;
