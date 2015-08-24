@@ -44,9 +44,9 @@ $loggeduser = JFactory::getUser();
 						<th class="left">
 							<?php echo JHtml::_('searchtools.sort', 'COM_USERS_HEADING_NAME', 'a.name', $listDirn, $listOrder); ?>
 						</th>
-						<th width="10%" class="nowrap center">
+						<!--<th width="10%" class="nowrap center">
 							<?php echo JHtml::_('searchtools.sort', 'JGLOBAL_USERNAME', 'a.username', $listDirn, $listOrder); ?>
-						</th>
+						</th>-->
 						<th width="5%" class="nowrap center">
 							<?php echo JHtml::_('searchtools.sort', 'COM_USERS_HEADING_ENABLED', 'a.block', $listDirn, $listOrder); ?>
 						</th>
@@ -118,9 +118,9 @@ $loggeduser = JFactory::getUser();
 								<?php echo JText::_('COM_USERS_DEBUG_USER');?></a></div>
 							<?php endif; ?>
 						</td>
-						<td class="center">
+						<!--<td class="center">
 							<?php echo $this->escape($item->username); ?>
-						</td>
+						</td>-->
 						<td class="center">
 							<?php if ($canChange) : ?>
 								<?php

@@ -2,6 +2,7 @@
 defined('_JEXEC') or die;
 $tmpl = JURI::base()."templates/kkvn/";
 $user = JFactory::getUser();
+$userProfile = JUserHelper::getProfile( $user->id );
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +21,11 @@ $user = JFactory::getUser();
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
+<style>
+.invalid {
+    border-color: red !important;
+}
+</style>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -52,7 +58,7 @@ $user = JFactory::getUser();
 					<li>
 						<ul class="ul-reset">
 							<li class="pull-left">
-								<a href="#" class="logf"  data-toggle="modal" data-target="#Modallogin">
+								<a href="index.php?option=com_users&view=login&Itemid=138" class="logf">
 									Đăng Nhập
 								</a>
 							</li>
@@ -62,13 +68,13 @@ $user = JFactory::getUser();
 						</ul>
 					</li>
 					<?php } else {?>
-					<li> <a href="#" class="dropdown-toggle avatar-thumb" data-toggle="dropdown" role="button" aria-expanded="false"> <img src="<?php echo $tmpl;?>images/ava.png" width="30" height="30" alt="" class="pull-left">
-						<div class=" pull-left user-name">Tran Thi Tham Tha Tham Thiet</div>
+					<li> <a href="#" class="dropdown-toggle avatar-thumb" data-toggle="dropdown" role="button" aria-expanded="false"> <img src="media/plg_user_profilepicture/images/50/<?php echo $userProfile->profilepicture['file'];?>" width="30" height="30" alt="" class="pull-left">
+						<div class=" pull-left user-name"><?php echo $user->name;?></div>
 						</a>
 						<ul class="dropdown-menu login-dropdown" role="menu">
-							<li><a href="#">Trang cá nhân</a></li>
-							<li><a href="#">Thông tin tài khoản</a></li>
-							<li><a href="#">Đăng xuất</a></li>
+							<li><a href="index.php?option=com_users&view=profile&Itemid=140">Trang cá nhân</a></li>
+							<!--<li><a href="index.php?option=com_users&view=profile&layout=edit&Itemid=141">Thông tin tài khoản</a></li>-->
+							<li><a href="<?php echo JRoute::_('index.php?option=com_users&task=user.logout&return='.base64_encode(JURI::base())); ?>">Đăng xuất</a></li>
 						</ul>
 					</li>
 					<?php }?>
@@ -113,7 +119,22 @@ $user = JFactory::getUser();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="<?php echo $tmpl;?>js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="<?php echo $tmpl;?>js/jquery.montage.min.js"></script> 
+<script type="text/javascript" src="<?php echo $tmpl;?>js/jquery.montage.min.js"></script>
+<script type="text/javascript" src="<?php echo $tmpl;?>js/moment.js"></script>
+<script type="text/javascript" src="<?php echo $tmpl;?>js/daterangepicker.js"></script>
+<script src="<?php echo $tmpl;?>js/fileinput.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo $tmpl;?>js/main.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+	jQuery('input').on('change invalid', function() {
+		var textfield = jQuery(this).get(0);
+		textfield.setCustomValidity('');
+		
+		if (!textfield.validity.valid) {
+		  textfield.setCustomValidity('Vui lòng điền vào đây');  
+		}
+	});
+});
+</script>
 </body>
 </html>

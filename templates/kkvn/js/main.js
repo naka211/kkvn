@@ -3,6 +3,14 @@ $(document).ready(function () {
 	$(window).on('resize', function(){
 		updateArrangeImages();
 	});
+	
+	$('#ImageDetailModal').on('shown.bs.modal', function() {
+		$('html').addClass('removeScroll');
+	})
+	$('#ImageDetailModal').on('hidden.bs.modal', function () {
+	   $('html').removeClass('removeScroll');
+	})
+	
 });
 function updateArrangeImages() {
 	$(function() {
@@ -31,6 +39,8 @@ function updateArrangeImages() {
 				}
 			}).attr('src',$img.attr('src'));
 		});	
+		
+		
 	});
 	
 	$(function() {
@@ -133,5 +143,25 @@ $(function () {
 					delay: { "show": 900, "hide": 100 }	
 					
 				});
-})
-$('#ModalLogin').modal('hide');
+});
+
+
+$(function() {
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+    cb(moment().subtract(29, 'days'), moment());
+
+    $('#reportrange').daterangepicker({
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+});
