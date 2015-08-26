@@ -13,6 +13,8 @@ $userProfile = JUserHelper::getProfile( $user->id );
 <!-- Bootstrap -->
 <link href="<?php echo $tmpl;?>css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo $tmpl;?>css/bootstrap-theme.css" rel="stylesheet">
+<link href="<?php echo $tmpl;?>css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+<link href="<?php echo $tmpl;?>css/daterangepicker.css" media="all" rel="stylesheet" type="text/css" />
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -113,7 +113,7 @@ class UsersControllerProfile extends UsersController
 		}
 
 		// Validate the posted data.
-		$data = $model->validate($form, $data);
+		/*$data = $model->validate($form, $data);
 
 		// Check for errors.
 		if ($data === false)
@@ -142,7 +142,7 @@ class UsersControllerProfile extends UsersController
 			$this->setRedirect(JRoute::_('index.php?option=com_users&view=profile&layout=edit&user_id=' . $userId, false));
 
 			return false;
-		}
+		}*/
 
 		// Attempt to save the data.
 		$return	= $model->save($data);

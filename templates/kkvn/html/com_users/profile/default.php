@@ -18,7 +18,7 @@ $userProfile = JUserHelper::getProfile( $user->id );//print_r($user);exit;
 							<div>
 								<div class="owner-avatar rel">
 									<a href="index.php?option=com_users&task=profile.edit&user_id=<?php echo $user->id;?>">
-										<img src="media/plg_user_profilepicture/images/200/<?php echo $userProfile->profilepicture['file'];?>" alt="">
+										<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilepicture/images/200/'.$userProfile->profilepicture['file'].'&w=200&h=200&q=100';?>" alt="">
 										<div class="change-image">Thay đổi Avatar</div>
 									</a>
 								</div>
@@ -33,7 +33,7 @@ $userProfile = JUserHelper::getProfile( $user->id );//print_r($user);exit;
 						<div class="col-xs-10 special-col-2">
 							<div class="cover">
 								<a href="index.php?option=com_users&task=profile.edit&user_id=<?php echo $user->id;?>">
-									<img src="media/plg_user_profilecover/images/original/<?php echo $userProfile->profilecover['file'];?>" alt="">
+									<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilecover/images/original/'.$userProfile->profilecover['file'].'&w=810&h=250&q=100';?>" alt="">
 									<div class="change-image">Thay đổi hình Cover</div>
 								</a>
 								<div class="fade-up fade-up-transparent">
@@ -51,6 +51,7 @@ $userProfile = JUserHelper::getProfile( $user->id );//print_r($user);exit;
 						<li><a href="#">Tác phẩm yêu thích</a></li>
 						<li><a href="#">Doanh thu</a></li>
 						<li><a href="#">Tác phẩm đã mua</a></li>
+						<li><a href="index.php?option=com_users&task=profile.edit&user_id=<?php echo $user->id;?>">Chỉnh sửa thông tin</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Khác <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
