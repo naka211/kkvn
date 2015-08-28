@@ -968,4 +968,26 @@ class JoomHelper
 
     return $val;
   }
+  	
+	//T.Trung
+	public static function getAdditional($id, $type){
+		$db = JFactory::getDBO();
+		$db->setQuery("SELECT details_value FROM #__joomgallery_image_details WHERE id = $id AND details_key = 'additional.".$type."'");
+		return $db->loadResult();
+	}
+	
+	public static function getTags($id){
+		$db = JFactory::getDBO();
+		$db->setQuery("SELECT details_value FROM #__joomgallery_image_details WHERE id = $id AND details_key = 'additional.tags'");
+		$tags = $db->loadResult();
+		$tmp = explode(",", $tags);
+		foreach($tmp as $item){
+			$item1 = str_replace(" ", "+", $item);
+			$tmp1[] = '<a href="'.JURI::base().'index.php?option=com_joomgallery&view=search&sstring='.$item1.'">'.$item.'</a>';
+		}
+		
+		$html = implode(",", $tmp1);
+		return $html;
+	}
+	//T.Trung end
 }

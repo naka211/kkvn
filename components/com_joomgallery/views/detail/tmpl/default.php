@@ -43,9 +43,9 @@ echo $this->loadTemplate('header'); ?>
 <?php if($this->params->get('slideshow_enabled')): ?>
   <div class="jg_displaynone">
     <form name="jg_slideshow_form" target="_top" method="post" action="">
-      <input type="hidden" name="jg_number" value="<?php echo $this->image->id; ?>" readonly="readonly" />
+      <input type="hidden" name="jg_number" value="<?php echo $this->image->id; ?>" readonly />
 <?php if(!$this->slideshow): ?>
-      <input type="hidden" name="slideshow" value="1" readonly="readonly" />
+      <input type="hidden" name="slideshow" value="1" readonly />
 <?php endif; ?>
     </form>
   </div>
@@ -82,7 +82,7 @@ echo $this->loadTemplate('header'); ?>
 <?php if($this->params->get('show_previous_link')): ?>
 <?php   if($this->_config->get('jg_cursor_navigation') == 1): ?>
       <form  name="form_jg_back_link" action="<?php echo $this->pagination['previous']['link']; ?>">
-        <input type="hidden" name="jg_back_link" readonly="readonly" />
+        <input type="hidden" name="jg_back_link" readonly />
       </form>
 <?php   endif;?>
       <a href="<?php echo $this->pagination['previous']['link']; ?>">
@@ -172,7 +172,7 @@ echo $this->loadTemplate('header'); ?>
 <?php if($this->params->get('show_next_link')): ?>
 <?php   if($this->_config->get('jg_cursor_navigation') == 1): ?>
       <form name="form_jg_forward_link" action="<?php echo $this->pagination['next']['link']; ?>">
-        <input type="hidden" name="jg_forward_link" readonly="readonly" />
+        <input type="hidden" name="jg_forward_link" readonly />
       </form>
 <?php   endif;?>
       <a href="<?php echo $this->pagination['next']['link']; ?>">
@@ -502,7 +502,7 @@ echo $this->loadTemplate('header'); ?>
           <?php echo JText::_('COM_JOOMGALLERY_DETAIL_BBCODE_IMG'); ?>:
         </div>
         <div class="jg_bbcode_right">
-          <input title="<?php echo JText::_('COM_JOOMGALLERY_DETAIL_BBCODE_IMG'); ?>" type="text" class="inputbox jg_img_BB_box" size="50" value="[IMG]<?php echo $this->params->get('bbcode_img'); ?>[/IMG]" readonly="readonly" onclick="select()" />
+          <input title="<?php echo JText::_('COM_JOOMGALLERY_DETAIL_BBCODE_IMG'); ?>" type="text" class="inputbox jg_img_BB_box" size="50" value="[IMG]<?php echo $this->params->get('bbcode_img'); ?>[/IMG]" readonly onclick="select()" />
         </div>
 <?php   endif;
         if($this->params->get('bbcode_url')): ?>
@@ -510,7 +510,7 @@ echo $this->loadTemplate('header'); ?>
           <?php echo  JText::_('COM_JOOMGALLERY_DETAIL_BBCODE_LINK'); ?>:
         </div>
         <div class="jg_bbcode_right">
-          <input title="<?php echo JText::_('COM_JOOMGALLERY_DETAIL_BBCODE_IMG'); ?>" type="text" class="inputbox jg_img_BB_box" size="50" value="[URL]<?php echo $this->params->get('bbcode_url'); ?>[/URL]" readonly="readonly" onclick="select()" />
+          <input title="<?php echo JText::_('COM_JOOMGALLERY_DETAIL_BBCODE_IMG'); ?>" type="text" class="inputbox jg_img_BB_box" size="50" value="[URL]<?php echo $this->params->get('bbcode_url'); ?>[/URL]" readonly onclick="select()" />
         </div>
 <?php   endif;
         if(!empty($this->slider)): ?>

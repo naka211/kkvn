@@ -15,6 +15,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 <link href="<?php echo $tmpl;?>css/bootstrap-theme.css" rel="stylesheet">
 <link href="<?php echo $tmpl;?>css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
 <link href="<?php echo $tmpl;?>css/daterangepicker.css" media="all" rel="stylesheet" type="text/css" />
+<link href="<?php echo $tmpl;?>css/trung.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,7 +75,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 						<div class=" pull-left user-name"><?php echo $user->name;?></div>
 						</a>
 						<ul class="dropdown-menu login-dropdown" role="menu">
-							<li><a href="index.php?option=com_users&view=profile&Itemid=140">Trang cá nhân</a></li>
+							<li><a href="index.php?option=com_joomgallery&view=userpanel&Itemid=140">Trang cá nhân</a></li>
 							<!--<li><a href="index.php?option=com_users&view=profile&layout=edit&Itemid=141">Thông tin tài khoản</a></li>-->
 							<li><a href="<?php echo JRoute::_('index.php?option=com_users&task=user.logout&return='.base64_encode(JURI::base())); ?>">Đăng xuất</a></li>
 						</ul>

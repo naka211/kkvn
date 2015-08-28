@@ -43,7 +43,7 @@ jQuery(document).ready(function () {
 											</div>
 											<div class="form-group">
 												<div class="col-sm-12">
-													<input type="text" class="form-control required validate-email" placeholder="Email *" name="jform[email]" id="email" value="<?php echo $this->data->email;?>" readonly />
+													<input type="text" class="form-control required validate-email" placeholder="Email *" name="jform[email1]" id="email" value="<?php echo $this->data->email;?>" readonly />
 												</div>
 											</div>
 											<div class="form-group">
@@ -81,21 +81,24 @@ jQuery(document).ready(function () {
                                                 <div class="col-xs-12">
                                                 	<input class="file" type="file" data-show-upload="false" name="jform[profilecover][file]">
                                                     <p class="p5t">Kích thước hình cover: độ phân giải thấp nhất là 810x250</p>
+													<?php if($this->data->profilecover['file']){?>
 													<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilecover/images/original/'.$this->data->profilecover['file'].'&h=80&q=100';?>">
 													<input type="checkbox" value="<?php echo $this->data->profilecover['file'];?>" name="jform[profilecover][file][remove]" id="jform_profilecover_fileremove" aria-invalid="false">
 													<label for="jform_profilecover_fileremove" aria-invalid="false">Xóa hình cover</label>
+													<?php }?>
                                                 </div>
                                             </div>
 											<div class="row">
 												<div class="col-sm-12">
 													<button type="button" id="checkForm" class="btn btn-primary btn-sm">Lưu</button>
 													<button type="submit" class="btn btn-primary btn-sm validate" style="display:none;" id="save"> Đăng Ký</button>
-													<a href="javascript:history.go(-1);" class="btn btn-default btn-sm">Trở về</a>
+													<a href="index.php?option=com_joomgallery&view=userpanel&Itemid=140" class="btn btn-default btn-sm">Trở về</a>
 												</div>
 											</div>
 											<input type="hidden" name="option" value="com_users" />
 				<input type="hidden" name="task" value="profile.save" />
 											<input type="hidden" name="jform[username]" id="username" value="<?php echo $this->data->username;?>" />
+											<input type="hidden" name="jform[email2]" id="username" value="<?php echo $this->data->email;?>" />
 											<?php echo JHtml::_('form.token');?>
 										</form>
 									</div>
