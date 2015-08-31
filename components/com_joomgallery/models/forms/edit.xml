@@ -18,7 +18,7 @@
     <field
       name="imgtitle"
       type="text"
-      class="inputbox"
+      class="inputbox form-control"
       id="title"
       label="COM_JOOMGALLERY_COMMON_TITLE"
       description="COM_JOOMGALLERY_EDIT_TITLE_TIP"
@@ -40,7 +40,7 @@
     <field 
       name="catid"
       id="catid"
-      class="inputbox"
+      class="inputbox form-control"
       type="joomcategory"
       label="COM_JOOMGALLERY_COMMON_CATEGORY"
       description="COM_JOOMGALLERY_EDIT_CATEGORY_TIP"

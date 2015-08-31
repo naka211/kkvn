@@ -18,7 +18,7 @@
         name="catid"
         id="single-catid"
         type="joomcategory"
-        class="inputbox"
+        class="inputbox form-control"
         label="COM_JOOMGALLERY_COMMON_CATEGORY"
         message="COM_JOOMGALLERY_COMMON_ALERT_YOU_MUST_SELECT_CATEGORY"
         validate="joompositivenumeric"

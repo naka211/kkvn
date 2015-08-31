@@ -44,6 +44,20 @@ class JoomGalleryControllerUpload extends JControllerLegacy
     $uploader = new JoomUpload();
     if($uploader->upload($type))
     {
+		//T.Trung
+		$db = JFactory::getDBO();
+		$db->setQuery("SELECT MAX(id) FROM #__joomgallery");
+		$img_id = $db->loadResult();
+		
+		$db->setQuery("INSERT INTO #__joomgallery_image_details (id, details_key, details_value, ordering) VALUES ('".$img_id."', 'additional.tags', '".JRequest::getVar('tags')."', 4)");
+		$db->query();
+		
+		$db->setQuery("INSERT INTO #__joomgallery_image_details (id, details_key, details_value, ordering) VALUES ('".$img_id."', 'additional.price', '".JRequest::getVar('price')."', 1)");
+		$db->query();
+		
+		$db->setQuery("INSERT INTO #__joomgallery_image_details (id, details_key, details_value, ordering) VALUES ('".$img_id."', 'additional.code', '".$this->generateRandomString()."', 3)");
+		$db->query();
+		//T.Trung end
       $msg  = JText::_('COM_JOOMGALLERY_UPLOAD_MSG_SUCCESSFULL');
 
       // Set redirect if we are asked for that
@@ -112,4 +126,16 @@ class JoomGalleryControllerUpload extends JControllerLegacy
       $this->setRedirect($url, $msg);
     }
   }
+  	
+	//T.Trung
+	function generateRandomString($length = 10) {
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$charactersLength = strlen($characters);
+		$randomString = '';
+		for ($i = 0; $i < $length; $i++) {
+			$randomString .= $characters[rand(0, $charactersLength - 1)];
+		}
+		return $randomString;
+	}
+	//T.Trung end
 }
