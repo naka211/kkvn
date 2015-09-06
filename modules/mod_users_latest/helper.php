@@ -39,7 +39,8 @@ class ModUsersLatestHelper
 
 		if (!$user->authorise('core.admin') && $params->get('filter_groups', 0) == 1)
 		{
-			$groups = $user->getAuthorisedGroups();
+			//$groups = $user->getAuthorisedGroups();
+			$groups = array(2);
 
 			if (empty($groups))
 			{
