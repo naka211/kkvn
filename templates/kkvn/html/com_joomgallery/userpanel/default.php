@@ -52,6 +52,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 						<li><a href="#">Doanh thu</a></li>
 						<li><a href="#">Tác phẩm đã mua</a></li>
 						<li><a href="index.php?option=com_users&task=profile.edit&user_id=<?php echo $user->id;?>">Chỉnh sửa thông tin</a></li>
+						<li><a href="index.php?option=com_recharge&view=recharge&Itemid=143">Nạp thẻ</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Khác <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">

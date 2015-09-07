@@ -59,24 +59,6 @@ $tmpl = JURI::base()."templates/kkvn/";
 			</div>
 			<!-- End .col-sm-4-->
 			{module 99}
-			<!--<div class="col-sm-4">
-				<div>
-					<div class="title-box">
-						<h2 class="title">Thành viên mới</h2>
-						<h5 class="des">Thành viên mới gia nhập</h5>
-					</div>
-				</div>
-				<div class="row list-user-box">
-					<div class="col-sm-3 user-item"> <a href="#"  data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-				</div>
-			</div>-->
 			<!-- End .col-sm-4-->
 			
 			<div class="col-sm-4">

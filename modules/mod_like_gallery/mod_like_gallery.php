@@ -62,5 +62,5 @@ foreach($images as $image){
 			</div>
 			<?php }?>
 		</div>
-		<a href="#" class="load-more-image">Tải thêm</a> </div>
+		<!--<a href="#" class="load-more-image">Tải thêm</a>--> </div>
 </div>
