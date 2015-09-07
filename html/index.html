@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Khoanh Khac Viet Nam</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/daterangepicker.css" media="all" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top main-navbar">
+      <div class="container rel">
+        <div class="topbg"></div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          	<img src="images/logo.png" alt="">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Trang Chủ</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Thư Viện Ảnh <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Tất Cả</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Theo danh mục</li>
+                <li><a href="#">Đất Nước</a></li>
+                <li><a href="#">Con Người</a></li>
+                <li><a href="#">Đất Nước</a></li>
+                <li><a href="#">Con Người</a></li>
+                <li><a href="#">Đất Nước</a></li>
+                <li><a href="#">Con Người</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Tin Tức</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            
+          </ul>
+          <div class="right-nav pull-right">
+            <ul class="nav navbar-nav rnav">
+                <li class="dropdown search-field"> 
+                    <div class="input-box form-group grid70 pull-left">
+                        <input type="text" placeholder="Tìm kiếm..." class="input-cl form-control" id="search">
+                        <button type="submit" class="go-btn btn">Search</button>
+                    </div>
+                </li>
+                <li class="hidden">
+                    <a href="#" class="dropdown-toggle avatar-thumb" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <img src="images/ava.png" width="30" height="30" alt="" class="pull-left">
+                        <div class=" pull-left user-name">Tran Thi Tham Tha Tham Thiet</div>
+                    </a>
+                    <ul class="dropdown-menu login-dropdown" role="menu">
+                        <li><a href="#">Trang cá nhân</a></li>
+                        <li><a href="#">Thông tin tài khoản</a></li>
+                        <li><a href="#">Đăng xuất</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<ul class="ul-reset">
+                    	<li class="pull-left">
+                            <a href="#" class="logf"  data-toggle="modal" data-target="#Modallogin">
+                                Đăng Nhập
+                            </a>
+                        </li>
+                    	<li class="pull-left">
+                            <a href="#" class="logf regist"  data-toggle="modal" data-target="#Modallogin">
+                                Đăng Ký
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+       	  </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="dark_box">
+     	<div class="container rel">
+            <div class="row">
+            	<div class="col-xs-12">
+                    <div class="menu-space"></div>
+                </div>
+                <div class=" col-sm-12">
+                    <div class="title-box">
+                        <h2 class="title">Tác phẩm chọn lọc</h2>
+                        <h5 class="des">Những tác phẩm được chọn lọc bởi Khoảnh Khắc Việt Nam</h5>
+                    </div>
+                    <div class="imgs-box m10t">
+                        <div class="am-container clearfix" id="am-container">
+                        	<div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/1.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/2.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/3.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/4.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/5.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/6.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/8.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/9.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/10.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/11.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/12.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"  data-toggle="modal" data-target="#ImageDetailModal"><img src="images_test/13.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                        </div>
+                    	<a href="#" class="load-more-image">Tải thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End .dark-box-->
+	
+    <div class="container-fluid m20t">
+     	<div class="container rel">
+            <div class="row">
+                <div class=" col-xs-12">
+                    <div class="title-box">
+                        <h2 class="title">Tác phẩm mới</h2>
+                        <h5 class="des">Những tác phẩm mới nhất vừa được đưa lên</h5>
+                    </div>
+                    <div class="imgs-box m10t">
+                        <div class="am-container clearfix" id="am-container2">
+                        	<div class="wrap">
+                                <a href="#"><img src="images_test/1.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/2.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/3.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/4.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/5.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/6.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/8.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/9.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/10.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/11.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/12.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/13.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                        </div>
+                    	<a href="#" class="load-more-image light-more">Tải thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End .container-fluid-->
+
+	<div class="container-fluid m20t">
+     	<div class="container rel">
+            <div class="row">
+                <div class=" col-xs-12">
+                    <div class="title-box">
+                        <h2 class="title">Tác phẩm đang được yêu thích</h2>
+                        <h5 class="des">Những tác phẩm được thích nhiều nhất trong thời gian gần đây</h5>
+                    </div>
+                    <div class="imgs-box m10t">
+                        <div class="am-container clearfix" id="am-container3">
+                        	<div class="wrap">
+                                <a href="#"><img src="images_test/1.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/2.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/3.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/4.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/5.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/6.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/8.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/9.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/10.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/11.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/12.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/13.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                        </div>
+                    	<a href="#" class="load-more-image light-more">Tải thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End .container-fluid-->
+    
+    <div class="container-fluid m20t">
+     	<div class="container rel">
+            <div class="row">
+            	<div class="col-sm-4">
+                	<div>
+                        <div class="title-box">
+                            <h2 class="title">Thành viên nổi bật</h2>
+                            <h5 class="des">Thành viên được yêu thích nhiều nhất</h5>
+                        </div>
+                    </div>
+                	<div class="row list-user-box">
+                    	<div class="col-xs-3 user-item">
+                        	<a href="#"  data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                        	<a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- End .col-sm-4-->
+                
+                <div class="col-sm-4">
+                	<div>
+                        <div class="title-box">
+                            <h2 class="title">Thành viên mới</h2>
+                            <h5 class="des">Thành viên mới gia nhập</h5>
+                        </div>
+                    </div>
+                	<div class="row list-user-box">
+                    	<div class="col-xs-3 user-item">
+                        	<a href="#"  data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                        	<a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                        <div class="col-xs-3 user-item">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham">
+                            	<img src="images/ava2.png" alt="" class="avatar-90">
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- End .col-sm-4-->
+                
+                <div class="col-sm-4">
+                	<div>
+                        <div class="title-box">
+                            <h2 class="title">Thành viên Facebook</h2>
+                            <h5 class="des">Trở thành thành viên trên Fanpage</h5>
+                        </div>
+                    </div>
+                	<div class="row list-user-box">
+                    	Facebook Like Page
+                    </div>
+                </div><!-- End .col-sm-4-->
+            </div>
+        </div>
+    </div><!-- End .container-fluid-->
+    
+    <div class="container-fluid m20t">
+     	<div class="container rel">
+            <div class="row">
+                <div class=" col-xs-12">
+                    <div class="title-box">
+                        <h2 class="title">Doanh thu trong tháng</h2>
+                        <h5 class="des">Những tác phẩm được mua nhiều nhất trong tháng</h5>
+                    </div>
+                    <div class="imgs-box m10t">
+                        <div class="am-container clearfix" id="am-container4">
+                        	<div class="wrap">
+                                <a href="#"><img src="images_test/1.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/2.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/3.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/4.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/5.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/6.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/8.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/9.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/10.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div> 
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/11.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/12.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <a href="#"><img src="images_test/13.jpg" class="arrange-img"></a>
+                                 <div class="img-top-overlay">
+                                	<a href="#"><img src="images/ava.png" class="avatar pull-left" alt=""></a>
+                                    <a href="#" class="user">Mike Chinh Nguyen asd asd</a>
+                                    <div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            2154</div>
+                                </div>
+                                <div class="img-bottom-overlay">
+                                    <div class="strong-me price">2.000.000 VND</div>
+                                </div>
+                            </div>
+                        </div>
+                    	<a href="#" class="load-more-image light-more">Tải thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End .container-fluid-->
+    
+    <div class="footer container-fluid">
+    	<div class="container m20t">
+        	<div class="row">
+            	<div class="col-xs-3">
+                	<h4 class="white-me text-uppercase">Tin tức</h4>
+                	<ul class="ul-reset footer-ul">
+                    	<li><a href="#">Bình chọn tác phẩm tháng 4</a></li>
+                        <li><a href="#">Công bố tác phẩm được yêu thích</a></li>
+                        <li><a href="#">Tại sao tác phẩm “Cánh Vạc” có doanh thu khủng nhất</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                	<h4 class="white-me text-uppercase">Thông tin</h4>
+                	<ul class="ul-reset footer-ul">
+                    	<li><a href="#">Mua tác phẩm</a></li>
+                        <li><a href="#">Bản quyền tác phẩm</a></li>
+                        <li><a href="#">Thanh toán online</a></li>
+                        <li><a href="#">Quy định</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                	<h4 class="white-me text-uppercase">Bảo trợ bởi</h4>
+                	<ul class="ul-reset footer-ul">
+                    	<li><a href="#">Vnexpress.net</a></li>
+                        <li><a href="#">Tuoitre.com.vn</a></li>
+                        <li><a href="#">Tuoitre.com.vn</a></li>
+                        <li><a href="#">Ingo.net</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-2">
+                	<h4 class="white-me text-uppercase">Liên hệ</h4>
+                	<ul class="ul-reset footer-ul">
+                    	<li>Khoảnh Khắc Việt Nam</li>
+                        <li>Email: <a href="mailto:kkvn@vdca.org.vn">kkvn@vdca.org.vn</a></li>
+                        <li>Hotline: 04.3.6338833</li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                	<h4 class="white-me text-uppercase">Nhận tin qua email</h4>
+                    <p>Để không bỏ lỡ bất kỳ tin tức nào cũng như thông tin tổ chức các cuộc thi, vui lòng nhập email:</p>
+                    <div class="input-box form-group grid70 pull-left newsletter">
+                        <input type="text" placeholder="Ví dụ:  An.Nguyen@gmail.com" class="input-cl form-control" id="newsletter">
+                        <button type="submit" class="go-btn btn submit-small-btn">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-xs-12">
+                    <div class="ft-line">Bản quyền thuộc về Hội Truyền Thông Số Việt Nam. Giấy phép cung cấp mạng xã hội trực tuyến số 43/GXN - TTĐT.<br>
+Giấy phép tổ chức thi tác phẩm nhiếp ảnh "Khoảnh khắc Việt Nam" số 152/MTNATL-NA ban hành ngày 05/4/2013.<br>
+Chịu trách nhiệm nội dung: Ông Nguyễn Lâm Thanh - Tổng thư ký</div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End .footer-->
+    
+    <!-- Video Modal -->
+    <div class="modal detail-box" id="ImageDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog game-modal-full" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-4 col-lg-3 col-white">
+                        	<div class="user-field clearfix">
+                                <a href="#" class=" pull-left col1"><img src="images/ava.png" class="avatar" alt=""></a>
+                                <div class="des pull-left col2">
+                                    <a href="#" class="user strong-me">Mike Chinh Nguyen asd asd</a>
+                                    <p>2145 người theo dõi</p>
+                                    <button type="button" class="btn btn-default btn-sm strong-me">Theo dõi người này</button>
+                                    <!--
+                                    <button type="button" class="btn btn-default btn-sm strong-me disabled">Đã theo dõi</button>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="info-field m10t">
+                            	<div class="post-info detail">
+                                    <p class="fs18">Chiều Hà Nội</p>
+                                    <p>
+                                        <span class="label-b">Mã tác phẩm: </span>
+                                        <span>MSDJGHF</span>
+                                    </p>
+                                    <p>
+                                        <span class="label-b">Thể loại: </span>
+                                        <span>Ngoại cảnh</span>
+                                    </p>
+                                    <p>
+                                        <span class="label-b">Độ phân giải: </span>
+                                        <span>1900x1080</span>
+                                    </p>
+                                    <p>
+                                        <span class="label-b">Giá: </span>
+                                        <span class="orange-me strong-me fs18">2.490.000 VND</span>
+                                    </p>
+                                    <button type="button" class="btn btn-warning btn-blue btn-big btn-sm strong-me text-uppercase">Mua tác phẩm</button>
+                                </div>
+                            </div>
+                            
+                            <div class="m10t clearfix"> 
+                            	<a href="#" class="pull-left btn-action active">
+                                    <div class="icon-action pull-left">
+                                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                        <span class="text-nowrap des">2014</span>
+                                    </div>
+                                    
+                                </a>
+                                <a href="#" class="pull-left btn-action">
+                                    <div class="icon-action pull-left">
+                                        <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                                        <span class="text-nowrap des">Share</span>
+                                    </div>
+                                    
+                                </a>
+                                <a href="#" class="pull-left btn-action">
+                                    <div class="icon-action pull-left">
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                        <span class="text-nowrap des">Thêm yêu thích</span>
+                                    </div>
+                                    <!-- them class active vao the "<a>" để on off cai nut-->
+                                </a>
+                            </div>
+                            <div class="comment-field m10t">
+                            	<div class="detailBox">
+                                    <div class="titleBox">
+                                      <label>Bình luận</label>
+                                    </div>
+                                    <div class="actionBox">
+                                    	<form class="form-inline" role="form">
+                                            <div class="form-group col1">
+                                                <textarea class="form-control" rows="2"  placeholder="Viết bình luận"></textarea>
+                                            </div>
+                                            <div class="form-group col2">
+                                                <button class="btn btn-default">Đăng</button>
+                                            </div>
+                                        </form>
+                                        <ul class="commentList">
+                                            <li>
+                                                <a href="#" class="commenterImage">
+                                                  <img src="images/ava.png" />
+                                                </a>
+                                                <div class="commentText">
+                                                	<a href="#" class=" strong-me">Nguyen Thi Mam</a>
+                                                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="commenterImage">
+                                                  <img src="images/ava.png" />
+                                                </a>
+                                                <div class="commentText">
+                                                	<a href="#" class=" strong-me">Nguyen Thi Mam</a>
+                                                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="commenterImage">
+                                                  <img src="images/ava.png" />
+                                                </a>
+                                                <div class="commentText">
+                                                	<a href="#" class=" strong-me">Nguyen Thi Mam</a>
+                                                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="commenterImage">
+                                                  <img src="images/ava.png" />
+                                                </a>
+                                                <div class="commentText">
+                                                	<a href="#" class=" strong-me">Nguyen Thi Mam</a>
+                                                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="commenterImage">
+                                                  <img src="images/ava.png" />
+                                                </a>
+                                                <div class="commentText">
+                                                	<a href="#" class=" strong-me">Nguyen Thi Mam</a>
+                                                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-xs-8 col-lg-9 img-wrapper">
+                        	<div class="img-position">
+                                <img src="images_test/73.jpg" alt="" class="img-thumb">
+                                <div class="helper"></div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+            	</div>
+        	</div>
+      	</div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.montage.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script src="js/fileinput.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+  </body>
+</html>
