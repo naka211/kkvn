@@ -705,6 +705,9 @@ class JoomGalleryModelCategory extends JoomGalleryModel
           ->where('a.catid     = '.$this->_id)
           ->where('a.approved  = 1')
           ->where('a.hidden    = 0')
+		  //T.Trung
+		  ->where('a.owner    != 0')
+		  //T.Trung end
           ->where('a.access    IN ('.$authorisedViewLevels.')')
           ->where('c.access    IN ('.$authorisedViewLevels.')');
     if($this->_config->get('jg_firstorder'))
