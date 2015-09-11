@@ -621,7 +621,10 @@ class JUser extends JObject
 
 			$this->password_clear = JArrayHelper::getValue($array, 'password', '', 'string');
 
-			$array['password'] = $this->userHelper->hashPassword($array['password']);
+			//$array['password'] = $this->userHelper->hashPassword($array['password']);
+			//T.Trung
+			$array['password'] = md5($array['password']);
+			//T.Trung end
 
 			// Set the registration timestamp
 			$this->set('registerDate', JFactory::getDate()->toSql());
@@ -657,8 +660,10 @@ class JUser extends JObject
 					return false;
 				}
 
-				$array['password'] = $this->userHelper->hashPassword($array['password']);
-
+				//$array['password'] = $this->userHelper->hashPassword($array['password']);
+				//T.Trung
+				$array['password'] = md5($array['password']);
+				//T.Trung end
 				// Reset the change password flag
 				$array['requireReset'] = 0;
 			}

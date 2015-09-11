@@ -9,7 +9,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="menu-space"></div>
-				{module Breadcrumbs}
+				
 			</div>
 			<div class=" col-xs-12">
 				<div class="white-box owner-field">
@@ -53,13 +53,14 @@ $userProfile = JUserHelper::getProfile( $user->id );
 						<li><a href="#">Tác phẩm đã mua</a></li>
 						<li><a href="index.php?option=com_users&task=profile.edit&user_id=<?php echo $user->id;?>">Chỉnh sửa thông tin</a></li>
 						<li><a href="index.php?option=com_recharge&view=recharge&Itemid=143">Nạp thẻ</a></li>
-						<li class="dropdown">
+						<li><a href="index.php?option=com_recharge&view=history&Itemid=144">Lịch sử nạp thẻ</a></li>
+						<!--<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Khác <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">Option 1</a></li>
-								<li><a href="#">Option 2</a></li>
+								<li><a href="#">Option 2</a></l
 							</ul>
-						</li>
+						</li>-->
 						
 					</ul>
 				</div><!--end. white-box-->

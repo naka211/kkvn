@@ -102,8 +102,10 @@ $userProfile = JUserHelper::getProfile( $user->id );
 				<h4 class="white-me text-uppercase">Nhận tin qua email</h4>
 				<p>Để không bỏ lỡ bất kỳ tin tức nào cũng như thông tin tổ chức các cuộc thi, vui lòng nhập email:</p>
 				<div class="input-box form-group grid70 pull-left newsletter">
-					<input type="text" placeholder="Ví dụ:  An.Nguyen@gmail.com" class="input-cl form-control" id="newsletter">
-					<button type="submit" class="go-btn btn submit-small-btn">Search</button>
+					{module Newsletter}
+					<!--<input type="text" placeholder="Tên" class="input-cl form-control">
+					<input type="text" placeholder="Email" class="input-cl form-control" style="margin-top:10px;">
+					<button type="submit" class="go-btn btn submit-small-btn">Search</button>-->
 				</div>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 // Include dependancies
 jimport('joomla.application.component.controller');
-
+//print_r($_REQUEST);exit;
 // Execute the task.
 $controller	= JControllerLegacy::getInstance('Recharge');
 $controller->execute(JFactory::getApplication()->input->get('task'));

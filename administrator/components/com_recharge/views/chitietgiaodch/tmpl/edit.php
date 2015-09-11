@@ -83,8 +83,8 @@ $document->addStyleSheet('components/com_recharge/assets/css/recharge.css');
 				<div class="controls"><?php echo $this->form->getInput('trans_id'); ?></div>
 			</div>
 			<div class="control-group">
-				<div class="control-label"><?php echo $this->form->getLabel('puid'); ?></div>
-				<div class="controls"><?php echo $this->form->getInput('puid'); ?></div>
+				<div class="control-label">Thời gian</div>
+				<div class="controls"><?php echo date("H:i d/y/Y", $this->item->time); ?></div>
 			</div>
 
 

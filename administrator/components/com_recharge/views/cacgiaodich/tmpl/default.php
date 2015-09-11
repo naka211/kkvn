@@ -127,7 +127,7 @@ if (!empty($this->extra_sidebar)) {
 				<?php echo JHtml::_('grid.sort',  'COM_RECHARGE_CACGIAODICH_PROVIDER', 'a.provider', $listDirn, $listOrder); ?>
 				</th>
 				<th class='left'>
-				<?php echo JHtml::_('grid.sort',  'COM_RECHARGE_CACGIAODICH_STATUS', 'a.status', $listDirn, $listOrder); ?>
+				<?php echo "Email"; ?>
 				</th>
 				<th class='left'>
 				<?php echo JHtml::_('grid.sort',  'COM_RECHARGE_CACGIAODICH_MESSAGE', 'a.message', $listDirn, $listOrder); ?>
@@ -166,6 +166,9 @@ if (!empty($this->extra_sidebar)) {
                 $canEdit	= $user->authorise('core.edit',			'com_recharge');
                 $canCheckin	= $user->authorise('core.manage',		'com_recharge');
                 $canChange	= $user->authorise('core.edit.state',	'com_recharge');
+				$db = JFactory::getDBO();
+				$db->setQuery("SELECT email FROM #__users WHERE id = ".$item->userid);
+				$email = $db->loadResult();
 				?>
 				<tr class="row<?php echo $i % 2; ?>">
                     
@@ -219,7 +222,7 @@ if (!empty($this->extra_sidebar)) {
 				</td>
 				<td>
 
-					<?php echo $item->status; ?>
+					<?php echo $email; ?>
 				</td>
 				<td>
 

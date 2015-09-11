@@ -287,7 +287,7 @@ class UsersModelUser extends JModelAdmin
 
 			return false;
 		}
-
+//print_r($user);exit;
 		// Store the data.
 		if (!$user->save())
 		{
