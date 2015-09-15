@@ -10,6 +10,10 @@ JHTML::_('behavior.formvalidator');
 				{module Breadcrumbs}
 			</div>
 			<div class="col-xs-12">
+				<div class="white-box m10t  clearfix" style="margin-bottom:10px;">
+					{module UserMenu}
+				</div><!--end. white-box-->
+				
 				<div class="title-box">
 					<h2 class="title">Nạp Thẻ</h2>
 				</div>

@@ -132,7 +132,7 @@ class JoomGalleryControllerFavourites extends JControllerLegacy
     }
     else
     {
-      $this->setRedirect(JRoute::_('index.php?view=favourites', false), $model->output('SUCCESSFULLY_REMOVED'));
+      $this->setRedirect(JRoute::_('index.php?option=com_recharge&view=favourite&Itemid=172', false), $model->output('SUCCESSFULLY_REMOVED'));
     }
   }
 

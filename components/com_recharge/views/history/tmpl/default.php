@@ -13,6 +13,10 @@ $items = $db->loadObjectList();
 				{module Breadcrumbs}
 			</div>
 			<div class=" col-xs-12">
+				<div class="white-box m10t  clearfix" style="margin-bottom:10px;">
+					{module UserMenu}
+				</div><!--end. white-box-->
+				
 				<div class=" m10t white-box p5all m20b">
 					<div class="title-box">
 						<h2 class="title">Lịch sử nạp thẻ</h2>

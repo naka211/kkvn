@@ -45,24 +45,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 				</div><!--end. white-box-->
 				
 				<div class="white-box m10t  clearfix">
-					<ul class="nav navbar-nav user-nav">
-						<li class="active"><a href="#">Tác phẩm</a></li>
-						<li><a href="#">Đang theo dõi</a></li>
-						<li><a href="#">Tác phẩm yêu thích</a></li>
-						<li><a href="#">Doanh thu</a></li>
-						<li><a href="#">Tác phẩm đã mua</a></li>
-						<li><a href="index.php?option=com_users&task=profile.edit&user_id=<?php echo $user->id;?>">Chỉnh sửa thông tin</a></li>
-						<li><a href="index.php?option=com_recharge&view=recharge&Itemid=143">Nạp thẻ</a></li>
-						<li><a href="index.php?option=com_recharge&view=history&Itemid=144">Lịch sử nạp thẻ</a></li>
-						<!--<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Khác <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Option 1</a></li>
-								<li><a href="#">Option 2</a></l
-							</ul>
-						</li>-->
-						
-					</ul>
+					{module UserMenu}
 				</div><!--end. white-box-->
 				<div>
 					<a href="<?php echo JRoute::_('index.php?view=upload', false); ?>" class="upload-image m10t">Đăng tác phẩm mới</a>

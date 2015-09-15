@@ -25,6 +25,9 @@ jQuery(document).ready(function () {
 				{module Breadcrumbs}
 			</div>
 			<div class="col-sm-12">
+				<div class="white-box m10t  clearfix" style="margin-bottom:10px;">
+					{module UserMenu}
+				</div><!--end. white-box-->
 				<div class="title-box">
 					<h2 class="title">Chỉnh sửa thông tin</h2>
 				</div>
