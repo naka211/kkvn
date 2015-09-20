@@ -1,13 +1,56 @@
 <?php
 defined('_JEXEC') or die;
 include_once("components/com_joomgallery/helpers/helper.php");
-$user = JFactory::getUser(JRequest::getVar('id'));
-$userProfile = JUserHelper::getProfile( $user->id );
+$owner = JFactory::getUser(JRequest::getVar('id'));
+$ownerProfile = JUserHelper::getProfile( $owner->id );
 $db = JFactory::getDBO();
-$q = "SELECT g.id, g.imgtitle, g.alias, g.imgfilename, c.name as cat_name, g.catid FROM #__joomgallery g INNER JOIN #__joomgallery_catg c ON g.catid = c.cid WHERE g.published = 1 AND g.approved = 1 AND g.owner = ".$user->id;
+$q = "SELECT g.id, g.imgtitle, g.alias, g.imgfilename, c.name as cat_name, g.catid FROM #__joomgallery g INNER JOIN #__joomgallery_catg c ON g.catid = c.cid WHERE g.published = 1 AND g.approved = 1 AND g.owner = ".$owner->id;
 $db->setQuery($q);
 $images = $db->loadObjectList();
+
+$user = JFactory::getUser();
+$q = "SELECT follow_id FROM #__follow WHERE user_id = ".$user->id;
+$db->setQuery($q);
+$followStr = $db->loadResult();
+if($followStr){
+	$tmp = explode(",",$followStr);
+	$key = array_search($owner->id, $tmp);
+	if($key){
+		$followed = true;
+	} else {
+		$followed = false;
+	}
+} else {
+	$followed = false;
+}
+
 ?>
+<script type="application/javascript">
+jQuery( document ).ready(function() {
+	jQuery("#follow").click(function(e) {
+		var flag = jQuery("#follow").val();
+		jQuery.ajax({
+		  method: "POST",
+		  url: "<?php echo JURI::base();?>index.php?option=com_recharge&task=user.follow",
+		  data: { ownerid: <?php echo $owner->id;?>, flag: flag}
+		}).done(function( status ) {
+			if(status == 1){
+				if(flag == 0){
+					var value = 1;
+					var text = "Theo dõi";
+				} else {
+					var value = 0;
+					var text = "Hủy theo dõi";
+				}
+				jQuery("#follow").val(value);
+				jQuery("#follow").html(text);
+			} else {
+				alert(status);
+			}
+		});
+	});
+});
+</script>
 <div class="container-fluid min-height-fix-window">
 	<div class="container rel">
 		<div class="row">
@@ -21,22 +64,22 @@ $images = $db->loadObjectList();
 						<div class="col-xs-2 special-col-1">
 							<div>
 								<div class="owner-avatar rel">
-									<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilepicture/images/200/'.$userProfile->profilepicture['file'].'&w=200&h=200&q=100';?>" alt="">
+									<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilepicture/images/200/'.$ownerProfile->profilepicture['file'].'&w=200&h=200&q=100';?>" alt="">
 										
 								</div>
 								<ul class="ul-reset">
-									<li class="owner-name"><?php echo $user->name;?></li>
-									<li>Tham gia: <?php echo JHtml::_('date', $user->registerDate, 'd-m-Y'); ?></li>
-									<li>Lượt xem: <?php echo $user->hits;?></li>
-									
+									<li class="owner-name"><?php echo $owner->name;?></li>
+									<li>Tham gia: <?php echo JHtml::_('date', $owner->registerDate, 'd-m-Y'); ?></li>
+									<li>Lượt xem: <?php echo $owner->hits;?></li>
 								</ul>
+								<button type="button" class="btn btn-default btn-sm strong-me" style="margin-left:10px;" id="follow" value="<?php if($followed) echo "0"; else echo "1";?>"><?php if($followed) echo "Hủy theo dõi"; else echo "Theo dõi";?></button>
 							</div>
 						</div>
 						<div class="col-xs-10 special-col-2">
 							<div class="cover">
-								<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilecover/images/original/'.$userProfile->profilecover['file'].'&w=810&h=250&q=100';?>" alt="">
+								<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilecover/images/original/'.$ownerProfile->profilecover['file'].'&w=810&h=250&q=100';?>" alt="">
 								<div class="fade-up fade-up-transparent">
-									<p class="status"><?php echo $user->status;?></p>
+									<p class="status"><?php echo $owner->status;?></p>
 								</div>
 							</div>
 						</div>

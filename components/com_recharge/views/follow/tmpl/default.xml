@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Theo dõi" option="com_user_profile_view_default_option">
+		<help
+			key = "Danh sách theo dõi"
+		/>
+		<message>
+			<![CDATA[com_user_profile_view_default_desc]]>
+		</message>
+	</layout>
+</metadata>

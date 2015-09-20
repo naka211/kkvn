@@ -8,6 +8,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
 <jdoc:include type="head" />
 
 <!-- Bootstrap -->
@@ -121,7 +122,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 <!-- End .footer--> 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="<?php echo JURI::base();?>media/jui/js/jquery-migrate.min.js"></script>
 <script src="<?php echo JURI::base();?>media/system/js/validate.js"></script> 

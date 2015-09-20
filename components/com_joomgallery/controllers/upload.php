@@ -57,6 +57,9 @@ class JoomGalleryControllerUpload extends JControllerLegacy
 		
 		$db->setQuery("INSERT INTO #__joomgallery_image_details (id, details_key, details_value, ordering) VALUES ('".$img_id."', 'additional.code', '".$this->generateRandomString()."', 3)");
 		$db->query();
+		
+		$db->setQuery("INSERT INTO #__joomgallery_image_details (id, details_key, details_value, ordering) VALUES ('".$img_id."', 'additional.like', 0, 2)");
+		$db->query();
 		//T.Trung end
       $msg  = JText::_('COM_JOOMGALLERY_UPLOAD_MSG_SUCCESSFULL');
 

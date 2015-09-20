@@ -245,7 +245,7 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* 
 .user-field .col2 { width: 60% }
 #ImageDetailModal .modal-content { background-color: transparent; }
 #ImageDetailModal .modal-content .modal-body .row { background-color: rgba(0,0,0,.9) }
-.col-white { background: #FFFFFF; min-height: 600px; padding: 20px; overflow-y: auto; max-height: 650px; }
+.col-white { background: #FFFFFF; /*min-height: 600px;*/ padding: 20px; /*overflow-y: auto; max-height: 650px;*/ margin-bottom:20px; }
 .italic { font-style: italic }
 .info-field p { margin-bottom: 3px; }
 .btn-big { width: 100%; height: 50px; color: #FFFFFF; max-width: 300px }
@@ -272,9 +272,9 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* 
 .actionBox .col2 { width: 22% !important }
 .modal-content { box-shadow: none; border: none }
 .removeScroll { overflow-y: hidden !important }
-.img-wrapper { text-align: center; height: 650px; padding: 0; position: relative; overflow: hidden }
+/*.img-wrapper { text-align: center; height: 650px; padding: 0; position: relative; overflow: hidden }*/
 .img-wrapper .img-thumb { vertical-align: middle; max-width: 99%; max-height: 100%; }
-.img-wrapper .img-position { position: absolute; height: 650px; width: 102%; left: -1%; right: -1%; top: 0; bottom: 0 }
+/*.img-wrapper .img-position { position: absolute; height: 650px; width: 102%; left: -1%; right: -1%; top: 0; bottom: 0 }*/
 .helper { display: inline-block; height: 100%; vertical-align: middle; zoom: 1; *display: inline;
 }
 #ImageDetailModal .modal-dialog .row { position: relative }

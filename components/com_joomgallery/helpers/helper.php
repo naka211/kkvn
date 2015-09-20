@@ -989,5 +989,11 @@ class JoomHelper
 		$html = implode(",", $tmp1);
 		return $html;
 	}
+	
+	public static function getCatName($id){
+		$db = JFactory::getDBO();
+		$db->setQuery("SELECT c.name FROM #__joomgallery_catg c INNER JOIN #__joomgallery g ON c.cid = g.catid WHERE g.id = $id");
+		return $db->loadResult();
+	}
 	//T.Trung end
 }
