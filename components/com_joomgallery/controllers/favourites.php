@@ -132,7 +132,12 @@ class JoomGalleryControllerFavourites extends JControllerLegacy
     }
     else
     {
-      $this->setRedirect(JRoute::_('index.php?option=com_recharge&view=favourite&Itemid=172', false), $model->output('SUCCESSFULLY_REMOVED'));
+		if(JRequest::getVar("r")){
+			$this->setRedirect(JRoute::_('index.php?option=com_joomgallery&view=detail&id='.JRequest::getVar('id'), false), $model->output('SUCCESSFULLY_REMOVED'));
+		} else {
+			$this->setRedirect(JRoute::_('index.php?option=com_recharge&view=favourite&Itemid=172', false), $model->output('SUCCESSFULLY_REMOVED'));
+		}
+      
     }
   }
 

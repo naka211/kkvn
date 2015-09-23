@@ -1,6 +1,6 @@
 <?php
 defined('_JEXEC') or die;
-include_once("components/com_joomgallery/helpers/helper.php");
+include_once(JPATH_SITE.DIRECTORY_SEPARATOR."components".DIRECTORY_SEPARATOR."com_joomgallery".DIRECTORY_SEPARATOR."helpers".DIRECTORY_SEPARATOR."helper.php");
 $owner = JFactory::getUser(JRequest::getVar('id'));
 $ownerProfile = JUserHelper::getProfile( $owner->id );
 $db = JFactory::getDBO();
@@ -17,40 +17,17 @@ if($followStr){
 	$key = array_search($owner->id, $tmp);
 	if($key){
 		$followed = true;
+		$follow_link = "index.php?option=com_recharge&task=user.follow&ownerid=".$owner->id."&flag=0";
 	} else {
 		$followed = false;
+		$follow_link = "index.php?option=com_recharge&task=user.follow&ownerid=".$owner->id."&flag=1";
 	}
 } else {
 	$followed = false;
+	$follow_link = "index.php?option=com_recharge&task=user.follow&ownerid=".$owner->id."&flag=1";
 }
 
 ?>
-<script type="application/javascript">
-jQuery( document ).ready(function() {
-	jQuery("#follow").click(function(e) {
-		var flag = jQuery("#follow").val();
-		jQuery.ajax({
-		  method: "POST",
-		  url: "<?php echo JURI::base();?>index.php?option=com_recharge&task=user.follow",
-		  data: { ownerid: <?php echo $owner->id;?>, flag: flag}
-		}).done(function( status ) {
-			if(status == 1){
-				if(flag == 0){
-					var value = 1;
-					var text = "Theo dõi";
-				} else {
-					var value = 0;
-					var text = "Hủy theo dõi";
-				}
-				jQuery("#follow").val(value);
-				jQuery("#follow").html(text);
-			} else {
-				alert(status);
-			}
-		});
-	});
-});
-</script>
 <div class="container-fluid min-height-fix-window">
 	<div class="container rel">
 		<div class="row">
@@ -72,7 +49,7 @@ jQuery( document ).ready(function() {
 									<li>Tham gia: <?php echo JHtml::_('date', $owner->registerDate, 'd-m-Y'); ?></li>
 									<li>Lượt xem: <?php echo $owner->hits;?></li>
 								</ul>
-								<button type="button" class="btn btn-default btn-sm strong-me" style="margin-left:10px;" id="follow" value="<?php if($followed) echo "0"; else echo "1";?>"><?php if($followed) echo "Hủy theo dõi"; else echo "Theo dõi";?></button>
+								<a href="<?php echo $follow_link;?>" class="btn btn-default btn-sm strong-me" style="margin-left:10px;"><?php if($followed) echo "Hủy theo dõi"; else echo "Theo dõi";?></a>
 							</div>
 						</div>
 						<div class="col-xs-10 special-col-2">
@@ -92,7 +69,7 @@ jQuery( document ).ready(function() {
 					</div>
 					<div>
 						<?php foreach($images as $image){
-						$link = JRoute::_('index.php?option=com_joomgallery&view=detail&id='.$image->id);	
+						$link = JRoute::_('index.php?option=com_joomgallery&view=detail&id='.$image->id);
 						$catPath = JoomHelper::getCatPath($image->catid);
 						
 						$catPath1 = str_replace("/",DIRECTORY_SEPARATOR,$catPath);
@@ -125,7 +102,7 @@ jQuery( document ).ready(function() {
 												<span class="label-b">Giá: </span>
 												<span class="orange-me strong-me fs18"><?php echo number_format(JoomHelper::getAdditional($image->id, "price"), 0, ",", ".")?> VND</span>
 											</p>
-											<button class="btn btn-warning btn-blue strong-me">Mua Tác Phẩm</button>
+											<a class="btn btn-warning btn-blue strong-me" href="index.php?option=com_recharge&view=cart&id=<?php echo $image->id;?>">Mua Tác Phẩm</a>
 										</div>
 									</div>
 								</div>

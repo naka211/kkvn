@@ -204,6 +204,11 @@ class JoomGalleryModelFavourites extends JoomGalleryModel
 
       return false;
     }
+	
+	//T.Trung
+	$this->_db->setQuery("UPDATE #__joomgallery_image_details SET details_value = details_value + 1 WHERE id = ".$this->_id." AND details_key = 'additional.like'");
+	$this->_db->query();
+	//T.Trung end
 
     if(is_null($this->piclist))
     {
@@ -406,6 +411,11 @@ class JoomGalleryModelFavourites extends JoomGalleryModel
 
       return false;
     }
+	
+	//T.Trung
+	$this->_db->setQuery("UPDATE #__joomgallery_image_details SET details_value = details_value - 1 WHERE id = ".$this->_id." AND details_key = 'additional.like'");
+	$this->_db->query();
+	//T.Trung end
 
     $new_piclist = array();
     foreach($piclist as $picid)

@@ -134,7 +134,7 @@ class JoomHelper
       $database = JFactory::getDBO();
       $query = $database->getQuery(true)
             ->select('catpath')
-            ->from(_JOOM_TABLE_CATEGORIES)
+            ->from('#__joomgallery_catg')
             ->where('cid = '.$catid);
       $database->setQuery($query);
 

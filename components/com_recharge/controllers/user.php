@@ -15,17 +15,18 @@ class RechargeControllerUser extends JControllerLegacy {
 		$q = "SELECT follow_id FROM #__follow WHERE user_id = ".$user->id;
 		$db->setQuery($q);
 		$followStr = $db->loadResult();
-			
+		
+		$redirect = 'index.php?option=com_recharge&view=user&id='.$ownerid.'&Itemid=142';
 		if($flag){
 			if($followStr){
 				$followStr = $followStr.",".$ownerid;
 				$db->setQuery("UPDATE #__follow SET follow_id = '".$followStr."' WHERE user_id = ".$user->id);
 				$db->query();
-				die('1');
+				$this->setRedirect(JRoute::_($redirect));
 			} else {
 				$db->setQuery("INSERT INTO #__follow (user_id, follow_id) VALUES (".$user->id.", ".$ownerid.")");
 				$db->query();
-				die('1');
+				$this->setRedirect(JRoute::_($redirect));
 			}
 		} else {
 			$tmpArr = explode(",", $followStr);
@@ -38,7 +39,7 @@ class RechargeControllerUser extends JControllerLegacy {
 			$followStr = implode(",", $tmpArr1);
 			$db->setQuery("UPDATE #__follow SET follow_id = '".$followStr."' WHERE user_id = ".$user->id);
 			$db->query();
-			die('1');
+			$this->setRedirect(JRoute::_($redirect));
 		}
     }
 }

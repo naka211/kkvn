@@ -222,7 +222,7 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* 
 .post-info { color: #FFFFFF; padding: 20px; min-height: 310px; }
 .post-info .label-b { color: #607587 }
 .post-item .part-body .thumb { height: 300px }
-.btn-blue { background: #38DCCF; border: #00C7A5 solid 1px; }
+.btn-blue { background: #38DCCF; border: #00C7A5 solid 1px; line-height:35px; }
 .icon-action { border: transparent solid 1px; background: #FFFFFF; height: 35px; text-align: center; line-height: 35px; color: #00E4B6; padding-left: 10px; padding-right: 10px }
 .post-item .part-footer .des { line-height: 30px; margin-bottom: 0; padding-left: 5px; color: #3F3F3F }
 .post-item .part-footer { padding: 10px }
@@ -273,7 +273,7 @@ background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* 
 .modal-content { box-shadow: none; border: none }
 .removeScroll { overflow-y: hidden !important }
 /*.img-wrapper { text-align: center; height: 650px; padding: 0; position: relative; overflow: hidden }*/
-.img-wrapper .img-thumb { vertical-align: middle; max-width: 99%; max-height: 100%; }
+.img-wrapper .img-thumb { vertical-align: middle; width: 99%; max-height: 100%; }
 /*.img-wrapper .img-position { position: absolute; height: 650px; width: 102%; left: -1%; right: -1%; top: 0; bottom: 0 }*/
 .helper { display: inline-block; height: 100%; vertical-align: middle; zoom: 1; *display: inline;
 }
