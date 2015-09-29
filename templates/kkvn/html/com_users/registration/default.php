@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="menu-space"></div>
-				{module Breadcrumbs}
+				
 			</div>
 			<div class="col-sm-12">
 				<div class="title-box">

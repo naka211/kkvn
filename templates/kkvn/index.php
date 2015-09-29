@@ -54,8 +54,10 @@ $userProfile = JUserHelper::getProfile( $user->id );
 				<ul class="nav navbar-nav rnav">
 					<li class="dropdown search-field">
 						<div class="input-box form-group grid70 pull-left">
-							<input type="text" placeholder="Tìm kiếm..." class="input-cl form-control" id="search">
+							<form action="<?php echo JRoute::_('index.php?option=com_joomgallery&view=search');?>" method="GET">
+							<input type="text" placeholder="Tìm kiếm..." class="input-cl form-control" id="search" name="sstring">
 							<button type="submit" class="go-btn btn">Search</button>
+							</form>
 						</div>
 					</li>
 					<?php if($user->guest){?>

@@ -56,6 +56,40 @@ class RechargeControllerCart extends JControllerLegacy {
 			$mail->AddAttachment($path, $image->imgfilename);
 			$sent = $mail->Send();
 			
+			//Push notification to android device
+			$db->setQuery("SELECT gcm_id FROM #__users_gsm WHERE user_id = ".$author." AND login_state = 1");
+			$gcms = $db->loadColumn();
+			foreach($gcms as $gcm){
+				// prep the bundle
+				$msg = array
+				(
+					'message' 	=> 'test',
+					'user_id'	=> $user_id,
+					'author'	=> $author
+				);
+				$fields = array
+				(
+					'registration_ids' 	=> $gcm,
+					'data'			=> $msg
+				);
+				 
+				$headers = array
+				(
+					'Authorization: key=AIzaSyA0r0rtbBIUXi2uU6oqRZ5TSbkeBGWYje8',
+					'Content-Type: application/json'
+				);
+				 
+				$ch = curl_init();
+				curl_setopt( $ch,CURLOPT_URL, 'https://android.googleapis.com/gcm/send' );
+				curl_setopt( $ch,CURLOPT_POST, true );
+				curl_setopt( $ch,CURLOPT_HTTPHEADER, $headers );
+				curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+				curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );
+				curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fields ) );
+				$result = curl_exec($ch );
+				curl_close( $ch );
+			}
+			
 			$this->setRedirect(JRoute::_('index.php?option=com_recharge&view=cart&layout=success'));
 		}
     }

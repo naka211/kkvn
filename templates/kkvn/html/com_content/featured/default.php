@@ -36,27 +36,10 @@ $tmpl = JURI::base()."templates/kkvn/";
 </div>
 <!-- End .container-fluid-->
 
-<div class="container-fluid m20t">
+<div class="container-fluid m20t" style="margin-bottom:20px;">
 	<div class="container rel">
 		<div class="row">
-			<div class="col-sm-4">
-				<div>
-					<div class="title-box">
-						<h2 class="title">Thành viên nổi bật</h2>
-						<h5 class="des">Thành viên được yêu thích nhiều nhất</h5>
-					</div>
-				</div>
-				<div class="row list-user-box">
-					<div class="col-sm-3 user-item"> <a href="#"  data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-					<div class="col-sm-3 user-item"> <a href="#" data-toggle="tooltip" data-placement="top" title="Nguyen Van Tuan Pham"> <img src="<?php echo $tmpl;?>images/ava2.png" alt="" class="avatar-90"> </a> </div>
-				</div>
-			</div>
+			{module 102}
 			<!-- End .col-sm-4-->
 			{module 99}
 			<!-- End .col-sm-4-->
@@ -78,7 +61,7 @@ $tmpl = JURI::base()."templates/kkvn/";
 </div>
 <!-- End .container-fluid-->
 
-<div class="container-fluid m20t">
+<!--<div class="container-fluid m20t">
 	<div class="container rel">
 		<div class="row">
 			<div class=" col-sm-12">
@@ -189,4 +172,4 @@ $tmpl = JURI::base()."templates/kkvn/";
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->

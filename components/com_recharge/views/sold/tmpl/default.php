@@ -1,11 +1,15 @@
 <?php
 defined('_JEXEC') or die;
+include_once(JPATH_SITE.DIRECTORY_SEPARATOR."components".DIRECTORY_SEPARATOR."com_joomgallery".DIRECTORY_SEPARATOR."helpers".DIRECTORY_SEPARATOR."helper.php");
 $user = JFactory::getUser();
 $userProfile = JUserHelper::getProfile( $user->id );
+
 $db = JFactory::getDBO();
-$user = JFactory::getUser();
-$db->setQuery("SELECT time, serial, code, amount FROM #__recharge WHERE userid = ".$user->id);
-$items = $db->loadObjectList();
+$db->setQuery("SELECT * FROM #__orders WHERE author = ".$user->id);
+$orders = $db->loadObjectList();
+
+$db->setQuery("SELECT SUM(price) as revenue FROM #__orders WHERE author = ".$user->id);
+$revenue = $db->loadResult();
 ?>
 <div class="container-fluid min-height-fix-window">
 	<div class="container rel">
@@ -51,32 +55,46 @@ $items = $db->loadObjectList();
 				
 				<div class=" m10t white-box p5all m20b">
 					<div class="title-box">
-						<h2 class="title">Lịch sử nạp thẻ</h2>
+						<h2 class="title">Danh sách tác phẩm đã bán</h2>
 					</div>
+				<div class="clearfix">
+						<div class="pull-left box-revenue">
+							<p class="des">Doanh thu</p>
+							<p class="money "><?php echo number_format($revenue, 0, ",", ".")?> VND</p>
+						</div>
+						<div class="pull-left box-revenue">
+							<p class="des">Tiền thực lãnh sau khi trừ phí dịch vụ -20%</p>
+							<p class="money-final orange-me strong-me"><?php echo number_format($revenue * 0.8, 0, ",", ".")?> VND</p>
+						</div>
+					</div>
+					<?php if($orders){?>
 					<div class="table-responsive custom-table ">
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr>
-									<th width="23%">Ngày nạp</th>
-									<th width="18%">Số seri thẻ</th>
-									<th width="18%">Mã pin</th>
-									<th width="11%">Trạng thái</th>
-									<th width="15%" class="text-right">Mệnh giá (VND)</th>
+									<th width="21%">Tác phẩm</th>
+									<th width="16%">Tên</th>
+									<th width="9%">Mã</th>
+									<th width="12%">Thời gian mua</th>
+									<th width="13%" class="text-right">Giá (VND)</th>
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach($items as $item){?>
+								<?php foreach($orders as $order){
+									$link = JRoute::_('index.php?option=com_joomgallery&view=detail&id='.$order->image_id);
+								?>
 								<tr>
-									<td><?php echo date("H:i d/m/Y", $item->time);?></td>
-									<td><?php echo $item->serial;?></td>
-									<td><?php echo $item->code;?></td>
-									<td><span class="green-me">Thành công</span></td>
-									<td class="text-right strong-me"><?php echo number_format((float)$item->amount, 0, ",", ".")?></td>
+									<td><a href="<?php echo $link;?>"><img src="index.php?option=com_joomgallery&view=image&format=raw&type=thumb&id=<?php echo $order->image_id;?>" alt="" class="thumbnail"></a></td>
+									<td><a href="<?php echo $link;?>"><?php echo $order->image_name;?></a></td>
+									<td><?php echo JoomHelper::getAdditional($order->image_id, "code");?></td>
+									<td><?php echo JHtml::_('date', $order->buy_date, 'H:i d-m-Y'); ?></td>
+									<td class="text-right strong-me"><?php echo number_format($order->price, 0, ",", ".")?></td>
 								</tr>
 								<?php }?>
 							</tbody>
 						</table>
 					</div>
+					<?php } else {echo "Chưa có tác phẩm nào!";}?>
 				</div>
 				
 			</div>

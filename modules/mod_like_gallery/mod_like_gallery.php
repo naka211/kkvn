@@ -54,8 +54,8 @@ foreach($images as $image){
 			<?php foreach($images as $image){
 				$link = JRoute::_('index.php?option=com_joomgallery&view=detail&id='.$image->id);	
 			?>
-			<div class="wrap"> <a href="<?php echo $link;?>"><img src="<?php echo JURI::base()."images/joomgallery/details/".$image->catpath."/".$image->imgfilename;?>" class="arrange-img" /></a>
-				<div class="img-top-overlay"> <a href="<?php echo $link;?>"><img src="<?php echo JURI::base()."media/plg_user_profilepicture/images/50/".$image->avatar;?>" class="avatar pull-left" alt=""></a> <a href="#" class="user"><?php echo $image->owner_name;?></a>
+			<div class="wrap"> <a href="<?php echo $link;?>"><img src="index.php?option=com_joomgallery&view=image&format=raw&type=img&id=<?php echo $image->id;?>" class="arrange-img" /></a>
+				<div class="img-top-overlay"> <a href="index.php?option=com_recharge&view=user&id=<?php echo $image->owner;?>&Itemid=142"><img src="<?php echo JURI::base()."media/plg_user_profilepicture/images/50/".$image->avatar;?>" class="avatar pull-left" alt=""></a> <a href="index.php?option=com_recharge&view=user&id=<?php echo $image->owner;?>&Itemid=142" class="user"><?php echo $image->owner_name;?></a>
 					<div class="like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <?php echo $image->like;?></div>
 				</div>
 				<div class="img-bottom-overlay">

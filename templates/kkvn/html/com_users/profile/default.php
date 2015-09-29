@@ -9,7 +9,7 @@ $userProfile = JUserHelper::getProfile( $user->id );//print_r($user);exit;
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="menu-space"></div>
-				{module Breadcrumbs}
+				
 			</div>
 			<div class=" col-xs-12">
 				<div class="white-box owner-field">

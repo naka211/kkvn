@@ -111,7 +111,7 @@ if($imagesStr){
 												<span class="label-b">Giá: </span>
 												<span class="orange-me strong-me fs18"><?php echo number_format(JoomHelper::getAdditional($image->id, "price"), 0, ",", ".")?> VND</span>
 											</p>
-											<button class="btn btn-warning btn-blue strong-me">Mua Tác Phẩm</button>
+											<a class="btn btn-warning btn-blue strong-me" href="index.php?option=com_recharge&view=cart&id=<?php echo $image->id;?>">Mua Tác Phẩm</a>
 										</div>
 									</div>
 								</div>

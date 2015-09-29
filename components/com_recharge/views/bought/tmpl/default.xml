@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Tác phẩm đã mua" option="">
+		<help
+			key = ""
+		/>
+		<message>
+			<![CDATA[com_user_profile_view_default_desc]]>
+		</message>
+	</layout>
+</metadata>
