@@ -60,7 +60,7 @@ $userProfile = JUserHelper::getProfile( $user->id );
 							</form>
 						</div>
 					</li>
-					<?php if($user->guest){?>
+					<?php if($user->id == 0){?>
 					<li>
 						<ul class="ul-reset">
 							<li class="pull-left">

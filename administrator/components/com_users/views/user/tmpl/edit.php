@@ -154,3 +154,10 @@ $fieldsets = $this->form->getFieldsets();
 	<input type="hidden" name="task" value="" />
 	<?php echo JHtml::_('form.token'); ?>
 </form>
+<script type="application/javascript">
+jQuery( document ).ready(function() {
+	jQuery("#jform_email").keyup(function(e) {
+		jQuery("#jform_username").val(jQuery("#jform_email").val());
+	});
+});
+</script>

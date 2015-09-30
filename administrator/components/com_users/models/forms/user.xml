@@ -8,7 +8,7 @@
 			size="30"
 		/>
 
-		<field name="username" type="text"
+		<field name="username" type="hidden"
 			description="COM_USERS_USER_FIELD_USERNAME_DESC"
 			label="COM_USERS_USER_FIELD_USERNAME_LABEL"
 			required="true"

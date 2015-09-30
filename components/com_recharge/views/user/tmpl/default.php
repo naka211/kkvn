@@ -41,8 +41,8 @@ if($followStr){
 						<div class="col-xs-2 special-col-1">
 							<div>
 								<div class="owner-avatar rel">
-									<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilepicture/images/200/'.$ownerProfile->profilepicture['file'].'&w=200&h=200&q=100';?>" alt="">
-										
+									<!--<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilepicture/images/200/'.$ownerProfile->profilepicture['file'].'&w=200&h=200&q=100';?>" alt="">-->
+									<img src="<?php echo JURI::base();?>media/plg_user_profilepicture/images/200/<?php echo $ownerProfile->profilepicture['file'];?>" alt="">
 								</div>
 								<ul class="ul-reset">
 									<li class="owner-name"><?php echo $owner->name;?></li>
@@ -54,7 +54,8 @@ if($followStr){
 						</div>
 						<div class="col-xs-10 special-col-2">
 							<div class="cover">
-								<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilecover/images/original/'.$ownerProfile->profilecover['file'].'&w=810&h=250&q=100';?>" alt="">
+								<!--<img src="<?php echo JURI::base();?>timthumb/timthumb.php?src=<?php echo JURI::base().'media/plg_user_profilecover/images/original/'.$ownerProfile->profilecover['file'].'&w=810&h=250&q=100';?>" alt="">-->
+								<img src="<?php echo JURI::base();?>media/plg_user_profilecover/images/original/<?php echo $ownerProfile->profilecover['file'];?>" alt="">
 								<div class="fade-up fade-up-transparent">
 									<p class="status"><?php echo $owner->status;?></p>
 								</div>
@@ -102,7 +103,9 @@ if($followStr){
 												<span class="label-b">Giá: </span>
 												<span class="orange-me strong-me fs18"><?php echo number_format(JoomHelper::getAdditional($image->id, "price"), 0, ",", ".")?> VND</span>
 											</p>
+											<?php if($user->id != 0){?>
 											<a class="btn btn-warning btn-blue strong-me" href="index.php?option=com_recharge&view=cart&id=<?php echo $image->id;?>">Mua Tác Phẩm</a>
+											<?php }?>
 										</div>
 									</div>
 								</div>

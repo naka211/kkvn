@@ -178,7 +178,7 @@ div#OR { height: 30px; width: 30px; border: 1px solid #C2C2C2; border-radius: 3p
 .owner-field .special-col-1 { padding-right: 0px }
 .owner-field .special-col-2 { padding-left: 0px }
 .cover { overflow: hidden; position: relative }
-.cover img { width: 100%; }
+.cover img { width: 100%; max-height:300px; }
 .cover .change-image, .owner-avatar .change-image { display: none; position: absolute; width: 150px; height: 30px; top: 50%; left: 50%; font-weight: bold; background: #000000; color: #FFFFFF; margin-left: -75px; text-align: center; line-height: 30px; opacity: .8; border-radius: 5px; margin-top: -15px }
 .cover a:hover .change-image, .owner-avatar a:hover .change-image { display: block }
 .fade-up { height: 80px; width: 100%; position: absolute; bottom: 0; left: 0; right: 0; vertical-align: bottom; padding: 20px; }
